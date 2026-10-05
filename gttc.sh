@@ -324,8 +324,9 @@ enable_target_country() {
     echo " 3. 🇯🇵 日本 (Japan)"
     echo " 4. 🇲🇴 澳门 (Macao)"
     echo " 5. 🇺🇸 美国 (United States)"
+    echo " 6. 🇷🇴 罗马尼亚 (Romania)"
     echo "================================================="
-    read -p "请选择 [1-5]: " c_choice
+    read -p "请选择 [1-6]: " c_choice
 
     case "$c_choice" in
         1)
@@ -357,6 +358,12 @@ enable_target_country() {
             DOH_SERVER="https://dns.google/dns-query"
             ECS_IP="64.233.160.0/24"
             LANG_HEADER="en-US,en;q=0.9"
+            ;;
+        6)
+            COUNTRY_NAME="🇷🇴 罗马尼亚"
+            DOH_SERVER="https://dns.google/dns-query"
+            ECS_IP="86.120.0.0/16"
+            LANG_HEADER="ro-RO,ro;q=0.9,en;q=0.8"
             ;;
         *)
             echo -e "${RED}无效选择，取消操作！${NC}"
